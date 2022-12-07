@@ -49,7 +49,7 @@
     <div id="cars">
         <div v-for="car in cars" @click.prevent="selectCar(car)" class="carCard">
 
-            <img :src="car.image" :alt="car.name">
+            <img :src="car.cars_image" :alt="car.cars_name">
 
 
         </div>
@@ -59,7 +59,10 @@
         <img class="electric" src="imgs/img_cars_Electric.jpg" alt="electric" width="400px">
         <img class="fivedoor" src="imgs/img_cars_5 Door.jpg" alt="5door" width="470px"> -->
         <div v-if="selectedCar" class="info">
-            <h2>{{ selectedCar.price }}</h2>
+            <h2>{{ selectedCar.cars_price }}</h2>
+            <p>{{ selectedCar.cars_engine }}</p>
+            <p>{{ selectedCar.cars_trans }}</p>
+            <p>{{ selectedCar.cars_speed }}</p>
         </div>
 
     </div>

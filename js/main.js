@@ -1,22 +1,22 @@
 const app = Vue.createApp({
     data: function () {
         return {
-            cars: [{
-                "name": "2023 Mini Convertible",
-                "price": "$43,390 CAD",
-                "engine": "3-Cylinder Twin Power Turbocharged Engine",
-                "trans": "6-speed manual",
-                "speed": "205km/h",
-                "image": "imgs/img_cars_Convert.jpg"
-            }],
+            cars: [],
             selectedCar: null
         };
+
+    },
+
+    async created() {
+        const response = await fetch("includes/connect.php")
+        const data = await response.json()
+        console.log(data)
+        this.cars = data
 
     },
     //////event listener////////
     methods: {
         selectCar: function (car) {
-            console.log(car)
             this.selectedCar = car
         }
     }
