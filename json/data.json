@@ -1,0 +1,30 @@
+[
+    {
+        "engine": "3-Cylinder 12 Valve Twin Power Turbo",
+        "price": "$36,790 CAD",
+        "model": "Cooper",
+        "modelType": "3 Door",
+        "imageUrl": "imgs/img_cars_3Door.jpg"
+    },
+    {
+        "engine": "3-Cylinder Twin Power Turbocharged Engine",
+        "price": "$43,390 CAD",
+        "model": "Cooper",
+        "modelType": "Convertible",
+        "imageUrl": "imgs/img_cars_Convert.jpg"
+    },
+    {
+        "engine": "Fully Electric Motor",
+        "price": "$45,590 CAD",
+        "model": "Cooper",
+        "modelType": "Electric",
+        "imageUrl": "imgs/img_cars_Electric.jpg"
+    },
+    {
+        "engine": "3-Cylinder 12 Valve Twin Power Turbo",
+        "price": "$37,790 CAD",
+        "model": "Cooper",
+        "modelType": "5 Door ",
+        "imageUrl": "imgs/img_cars_5Door.jpg"
+    }
+]

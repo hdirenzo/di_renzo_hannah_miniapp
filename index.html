@@ -11,6 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="imgs/logo_mini.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
 
 
@@ -45,33 +46,21 @@
     <h2 id="details">
         VIEW DETAILS
     </h2>
+    <!----------------lightbox-->
 
-    <div id="cars">
-        <div v-for="car in cars" @click.prevent="selectCar(car)" class="carCard">
+    <section id="cars">
+        <thelightbox @closelb="this.showLB = false" v-if="showLB" :item="lbData">
 
-            <img class="carPics" :src="car.cars_img" :alt="car.cars_name">
+        </thelightbox>
+
+        <thecars @loadcardata="loadcardata" v-for="piece in carData" :piece="piece">
+
+        </thecars>
+    </section>
 
 
-        </div>
 
-        <!-- <img class="threedoor" src="imgs/img_cars_3 Door.jpg" alt="3door" width="470px">
-        <img class="convertible" src="imgs/img_cars_Convert.jpg" alt="convertible" width="400px">
-        <img class="electric" src="imgs/img_cars_Electric.jpg" alt="electric" width="400px">
-        <img class="fivedoor" src="imgs/img_cars_5 Door.jpg" alt="5door" width="470px"> -->
-        <div v-if="selectedCar" class="info">
-            <h2 class="displayName">{{ selectedCar.cars_name }}</h2>
-            <h2>{{ selectedCar.cars_price }}</h2>
-            <p>{{ selectedCar.cars_engine }}</p>
-            <p>{{ selectedCar.cars_trans }}</p>
-            <p>{{ selectedCar.cars_speed }}</p>
-
-            <button id="more">DISCOVER MORE</button>
-            <button id="book">BOOK A TEST DRIVE</button>
-        </div>
-
-    </div>
-
-    <!-------------------JSON DATA------------>
+    <!-------------------lightbox end------------>
 
     <!----------------------------------------------------->
     <footer>
@@ -79,7 +68,8 @@
     </footer>
     <!--including vue.js library on webpage-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.45/vue.global.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
+
 </body>
 
 
