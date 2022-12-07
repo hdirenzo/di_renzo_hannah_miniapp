@@ -51,7 +51,7 @@ H3 {
     left: 50%;
 }
 
-#cars {
+div#cars {
     display: flex;
     justify-content: space-between;
     padding: 40px;
@@ -63,4 +63,32 @@ H3 {
     color: rgb(175, 44, 44);
     text-shadow: 3px 3px 8px #6e6464;
 
+}
+
+img.carPics {
+    width: 200px;
+}
+
+h2.displayName {
+    font-size: x-large;
+}
+
+div.info {
+    text-align: right;
+}
+
+button#more {
+    background-color: rgb(255, 255, 255);
+    color: rgb(216, 23, 23);
+    padding: 10px 20px;
+    border: rgb(216, 23, 23);
+    text-align: center;
+}
+
+button#book {
+    background-color: rgb(169, 9, 9);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
 }

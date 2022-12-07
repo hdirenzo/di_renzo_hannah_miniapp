@@ -41,7 +41,7 @@
         </div>
     </div>
 
-    <!-----how to overlay the text on the vid ugh-->
+
     <h2 id="details">
         VIEW DETAILS
     </h2>
@@ -49,7 +49,7 @@
     <div id="cars">
         <div v-for="car in cars" @click.prevent="selectCar(car)" class="carCard">
 
-            <img :src="car.cars_img" :alt="car.cars_name">
+            <img class="carPics" :src="car.cars_img" :alt="car.cars_name">
 
 
         </div>
@@ -59,10 +59,14 @@
         <img class="electric" src="imgs/img_cars_Electric.jpg" alt="electric" width="400px">
         <img class="fivedoor" src="imgs/img_cars_5 Door.jpg" alt="5door" width="470px"> -->
         <div v-if="selectedCar" class="info">
+            <h2 class="displayName">{{ selectedCar.cars_name }}</h2>
             <h2>{{ selectedCar.cars_price }}</h2>
             <p>{{ selectedCar.cars_engine }}</p>
             <p>{{ selectedCar.cars_trans }}</p>
             <p>{{ selectedCar.cars_speed }}</p>
+
+            <button id="more">DISCOVER MORE</button>
+            <button id="book">BOOK A TEST DRIVE</button>
         </div>
 
     </div>
