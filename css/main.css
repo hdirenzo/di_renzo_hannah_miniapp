@@ -1,5 +1,66 @@
-h2 {
+body {
+  margin: 0;
+}
+
+h2,
+h3 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+video {
+  width: 100%;
+}
+
+#footer {
+  width: 100%;
+}
+
+.overlayPic {
+  width: 40%;
+}
+
+#ParentVideo {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 30%;
+  right: 5%;
+}
+
+H3 {
+  color: white;
+  font-size: xx-large;
+}
+
+.slogan {
+  position: absolute;
+  top: 40%;
+  left: 55%;
+}
+
+.downarrow {
+  width: 3%;
+}
+
+.arrow {
+  position: absolute;
+  top: 81%;
+  left: 50%;
+}
+
+#cars {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+#details {
+  padding: 30px;
+  text-align: center;
+  color: rgb(175, 44, 44);
+  text-shadow: 3px 3px 8px #6e6464;
 }
 
 /*# sourceMappingURL=main.css.map */

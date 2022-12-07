@@ -13,6 +13,7 @@
     <link rel="icon" type="image/x-icon" href="imgs/logo_mini.jpg">
     <link rel="stylesheet" href="css/main.css">
 
+
     <title>MINI Canada</title>
 </head>
 
@@ -22,29 +23,57 @@
     <header>
         <img src="imgs/navigation.svg" alt="nav">
     </header>
-    <section class="video">
-        <video width="1890" height="920" autoplay muted loop>
-            <source src="imgs/vid_miniCooper.mp4" type="video/mp4">
-        </video>
-    </section>
-    <!-----how to overlay the text on the vid ugh-->
-    <div class="overlay">
-        <h2>Mini Cooper</h2>
+    <div id="ParentVideo">
+        <div class="video">
+            <video autoplay muted loop>
+                <source src="imgs/vid_miniCooper.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="overlay">
+            <img class="overlayPic" src="imgs/logo_silver.png" alt="silverLogo">
+        </div>
+        <div class="slogan">
+            <h3>AN UNFORGETTABLE DRIVING EXPERIENCE.</h3>
+        </div>
+        <div class="arrow">
+            <img class="downarrow" src="imgs/img_downarrow.png" alt="downarrow">
+        </div>
     </div>
 
-    <section class="cars">
+    <!-----how to overlay the text on the vid ugh-->
+    <h2 id="details">
+        VIEW DETAILS
+    </h2>
 
-        <img id="threedoor" src="imgs/img_cars_3 Door.jpg" alt="3door" width="400px">
-        <img id="convertible" src="imgs/img_cars_Convert.jpg" alt="convertible" width="400px">
-        <img id="electric" src="imgs/img_cars_Electric.jpg" alt="electric" width="400px">
-        <img id="fivedoor" src="imgs/img_cars_5 Door.jpg" alt="5door" width="400px">
+    <div id="cars">
+        <div v-for="car in cars" @click.prevent="selectCar(car)" class="carCard">
 
-    </section>
+            <img :src="car.image" :alt="car.name">
 
+
+        </div>
+
+        <!-- <img class="threedoor" src="imgs/img_cars_3 Door.jpg" alt="3door" width="470px">
+        <img class="convertible" src="imgs/img_cars_Convert.jpg" alt="convertible" width="400px">
+        <img class="electric" src="imgs/img_cars_Electric.jpg" alt="electric" width="400px">
+        <img class="fivedoor" src="imgs/img_cars_5 Door.jpg" alt="5door" width="470px"> -->
+        <div v-if="selectedCar" class="info">
+            <h2>{{ selectedCar.price }}</h2>
+        </div>
+
+    </div>
+
+    <!-------------------JSON DATA------------>
+
+    <!----------------------------------------------------->
     <footer>
         <img id="footer" src="imgs/mini_footer.png" alt="footer" width="1890px">
     </footer>
-
+    <!--including vue.js library on webpage-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.45/vue.global.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 
 </html>
