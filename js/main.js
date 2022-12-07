@@ -8,7 +8,7 @@ const app = Vue.createApp({
     },
 
     async created() {
-        const response = await fetch("includes/connect.php")
+        const response = await fetch("json/data.json")
         const data = await response.json()
         console.log(data)
         this.cars = data

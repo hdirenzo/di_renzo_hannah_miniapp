@@ -47,15 +47,25 @@
         VIEW DETAILS
     </h2>
     <!----------------lightbox-->
-
     <section id="cars">
-        <thelightbox @closelb="this.showLB = false" v-if="showLB" :item="lbData">
+        <div v-for="car in cars" @click.prevent="selectCar(car)" class="carCard">
+            <img class="carPics" :src="car.imageUrl" :alt="car.model">
+            <h3> {{ car.model }} </h3>
+        </div>
 
-        </thelightbox>
+        <div v-if="selectedCar">
+            <div @click="closeLB" class="lightbox_close white right ">
+                <i class="fa-solid fa-circle-xmark fa-4x "></i>
+            </div>
+            <h2 class="displayName">{{ selectedCar.model }}</h2>
+            <h2>{{ selectedCar.price }}</h2>
+            <p>{{ selectedCar.engine }}</p>
+            <p>{{ selectedCar.trans }}</p>
+            <p>{{ selectedCar.speed }}</p>
 
-        <thecars @loadcardata="loadcardata" v-for="piece in carData" :piece="piece">
-
-        </thecars>
+            <button id="more">DISCOVER MORE</button>
+            <button id="book">BOOK A TEST DRIVE</button>
+        </div>
     </section>
 
 
