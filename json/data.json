@@ -1,30 +1,38 @@
 [
     {
         "engine": "3-Cylinder 12 Valve Twin Power Turbo",
+        "speed": "220 km/h",
         "price": "$36,790 CAD",
         "model": "Cooper",
         "modelType": "3 Door",
-        "imageUrl": "imgs/img_cars_3Door.jpg"
+        "imageUrl": "imgs/img_cars_3Door.jpg",
+        "trans": "6 Speed Maunal"
     },
     {
         "engine": "3-Cylinder Twin Power Turbocharged Engine",
+        "speed": "205 km/h",
         "price": "$43,390 CAD",
         "model": "Cooper",
         "modelType": "Convertible",
-        "imageUrl": "imgs/img_cars_Convert.jpg"
+        "imageUrl": "imgs/img_cars_Convert.jpg",
+        "trans": "6 Speed Maunal"
     },
     {
         "engine": "Fully Electric Motor",
+        "speed": "150 km/h",
         "price": "$45,590 CAD",
         "model": "Cooper",
         "modelType": "Electric",
-        "imageUrl": "imgs/img_cars_Electric.jpg"
+        "imageUrl": "imgs/img_cars_Electric.jpg",
+        "trans": "Single Speed Automatic"
     },
     {
         "engine": "3-Cylinder 12 Valve Twin Power Turbo",
+        "speed": "207 km/h",
         "price": "$37,790 CAD",
         "model": "Cooper",
         "modelType": "5 Door ",
-        "imageUrl": "imgs/img_cars_5Door.jpg"
+        "imageUrl": "imgs/img_cars_5Door.jpg",
+        "trans": "6 Speed Maunal"
     }
 ]
