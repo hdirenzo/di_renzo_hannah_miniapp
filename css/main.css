@@ -97,4 +97,10 @@ h2#popular {
   letter-spacing: 13px;
 }
 
+div#infoBox {
+  background-color: rgb(236, 236, 236);
+  text-align: center;
+  border-radius: 15px;
+}
+
 /*# sourceMappingURL=main.css.map */
