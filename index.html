@@ -42,17 +42,18 @@
         </div>
     </div>
 
-
+    <h2 id="popular">MINI MOST POPULAR</h2>
     <h2 id="details">
         VIEW DETAILS
     </h2>
+
     <!----------------lightbox-->
     <section id="cars">
-        <loader v-if="isLoading"></loader>
-        
+        <loader class="plsload" v-if="isLoading"></loader>
+
         <error v-if="isError"></error>
 
-        <div v-else>
+        <div class="carHolder" style="display: flex; justify-content: space-between;" v-else>
             <div v-for="car in cars" @click.prevent="selectCar(car)" class="carCard">
                 <img class="carPics" :src="car.imageUrl" :alt="car.model">
                 <h3> {{ car.model }} </h3>
@@ -60,7 +61,7 @@
 
             <div v-if="selectedCar">
                 <div @click="closeLB" class="lightbox_close white right ">
-                    <i class="fa-solid fa-circle-xmark fa-4x "></i>
+
                 </div>
                 <h2 class="displayName">{{ selectedCar.model }}</h2>
                 <h2>{{ selectedCar.price }}</h2>

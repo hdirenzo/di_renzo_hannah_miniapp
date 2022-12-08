@@ -91,4 +91,10 @@ button#book {
   text-align: center;
 }
 
+h2#popular {
+  text-align: center;
+  font-size: xx-large;
+  letter-spacing: 13px;
+}
+
 /*# sourceMappingURL=main.css.map */
