@@ -23,4 +23,4 @@ GIT REPOSITORY
 git@github.com:hdirenzo/di_renzo_hannah_miniapp.git
 https://github.com/hdirenzo/di_renzo_hannah_miniapp.git
 
-See assets for detailed porject plan. 
+See assets for detailed project plan.
