@@ -48,23 +48,29 @@
     </h2>
     <!----------------lightbox-->
     <section id="cars">
-        <div v-for="car in cars" @click.prevent="selectCar(car)" class="carCard">
-            <img class="carPics" :src="car.imageUrl" :alt="car.model">
-            <h3> {{ car.model }} </h3>
-        </div>
+        <loader v-if="isLoading"></loader>
+        
+        <error v-if="isError"></error>
 
-        <div v-if="selectedCar">
-            <div @click="closeLB" class="lightbox_close white right ">
-                <i class="fa-solid fa-circle-xmark fa-4x "></i>
+        <div v-else>
+            <div v-for="car in cars" @click.prevent="selectCar(car)" class="carCard">
+                <img class="carPics" :src="car.imageUrl" :alt="car.model">
+                <h3> {{ car.model }} </h3>
             </div>
-            <h2 class="displayName">{{ selectedCar.model }}</h2>
-            <h2>{{ selectedCar.price }}</h2>
-            <p>{{ selectedCar.engine }}</p>
-            <p>{{ selectedCar.trans }}</p>
-            <p>{{ selectedCar.speed }}</p>
 
-            <button id="more">DISCOVER MORE</button>
-            <button id="book">BOOK A TEST DRIVE</button>
+            <div v-if="selectedCar">
+                <div @click="closeLB" class="lightbox_close white right ">
+                    <i class="fa-solid fa-circle-xmark fa-4x "></i>
+                </div>
+                <h2 class="displayName">{{ selectedCar.model }}</h2>
+                <h2>{{ selectedCar.price }}</h2>
+                <p>{{ selectedCar.engine }}</p>
+                <p>{{ selectedCar.trans }}</p>
+                <p>{{ selectedCar.speed }}</p>
+
+                <button id="more">DISCOVER MORE</button>
+                <button id="book">BOOK A TEST DRIVE</button>
+            </div>
         </div>
     </section>
 
@@ -77,7 +83,10 @@
         <img id="footer" src="imgs/mini_footer.png" alt="footer" width="1890px">
     </footer>
     <!--including vue.js library on webpage-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.45/vue.global.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.45/vue.global.js"></script> -->
+    <script src="lib/vue.global.min.js"></script>
+    <script src="js/components/loader.js" type="module"></script>
+    <script src="js/components/error.js" type="module"></script>
     <script src="js/main.js" type="module"></script>
 
 </body>
